@@ -1,0 +1,132 @@
+.information {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 210px 580px;
+  grid-template-rows: 60px 180px;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 840px;
+  height: 240px;
+}
+.profile-img-container {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.profile-img {
+  position: relative;
+  z-index: 1;
+  width: 180px;
+  height: 200px;
+  border-radius: 50%;
+}
+.profile-name {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  margin-left: 60px;
+}
+.profile-bakar-info {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  grid-row: 2/3;
+  grid-column: 3/4;
+  transform: translateY(-55px);
+}
+.profile-bakar-info button {
+  background: var(--clr-hack);
+  outline: none;
+  border-radius: 3px;
+  border: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+.flag-line {
+  width: 100%;
+  grid-row: 2/3;
+  grid-column: 1/4;
+  height: 32px;
+  margin-top: 60px;
+  background: var(--clr-hack);
+  /* background: linear-gradient(to right, #ff5316, #ff1c57);
+  background: -webkit-linear-gradient(to right, #ff5316, #ff1c57); */
+  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
+}
+.posts {
+  max-width: 800px;
+  position: relative;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%);
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.post {
+  /* margin: 5px 10px; */
+  width: 195px;
+  height: 200px;
+}
+@media (max-width: 900px) {
+  .information {
+    grid-template-columns: 6% 23% 70%;
+    grid-template-rows: 60% 40%;
+    width: 90%;
+    height: 150px;
+  }
+  .profile-bakar-info {
+    transform: translateY(0px);
+  }
+  .profile-img {
+    width: 150px;
+    height: 180px;
+  }
+}
+@media (max-width: 800px) {
+  .posts {
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .profile-img-container {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .profile-bakar-info {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    margin-top: 40px;
+  }
+  .flag-line {
+    width: 100%;
+    grid-row: 2/3;
+    grid-column: 1/4;
+    height: 12px;
+    margin-top: 20px;
+  }
+  .profile-img {
+    width: 80px;
+    height: 100px;
+  }
+  .profile-name {
+    font-size: 14px;
+    /* margin-bottom: 20px; */
+  }
+  .posts {
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  }
+  .post {
+    position: relative;
+    margin-bottom: 5px;
+    width: 93%;
+    /* height: 96%; */
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
